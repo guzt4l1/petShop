@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design Mastery | Pet Place</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">Pet Place</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#store">Store</a></li>
+        <li><a href="#service">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <header id="home">
+      <div class="section__container header__container">
+        <div class="header__content">
+          <h4>Welcome</h4>
+          <h1>Pet<br /><span>Shop</span></h1>
+          <h2>Kami mencintai hewan peliharaan seperti Anda:)</h2>
+          <p>
+            Dari pemeriksaan rutin hingga perawatan khusus, kami siap memastikan hewan peliharaan Anda hidup bahagia dan sehat.
+          </p>
+          <div class="header__btn">
+            <button>
+              Start Here!
+              <span><i class="ri-arrow-right-line"></i></span>
+            </button>
+          </div>
+        </div>
+        <div class="header__image">
+          <img
+            src="assets/header-bg.png"
+            alt="header-bg"
+            class="header__image-bg"
+          />
+          <img src="assets/header.png" alt="header" />
+        </div>
+      </div>
+      <div class="header__bottom"></div>
+    </header>
+
+    <section class="section__container intro__container">
+      <p class="section__subheader">Intro</p>
+      <h2 class="section__header">Kenali kami lebih jauh</h2>
+      <div class="intro__grid">
+        <div class="intro__card">
+          <div class="intro__image">
+            <img src="assets/intro-1.png" alt="intro" />
+          </div>
+          <h4>Pakar Hewan Peliharaan</h4>
+          <p>
+            Temui tim dokter hewan kami yang terampil, yang berdedikasi pada kesejahteraan hewan peliharaan Anda.
+          </p>
+          <a href="#">Baca selengkapnya</a>
+        </div>
+        <div class="intro__card">
+          <div class="intro__image">
+            <img src="assets/intro-2.png" alt="intro" />
+          </div>
+          <h4>Layanan Dokter Hewan</h4>
+          <p>
+            Menawarkan berbagai layanan dokter hewan untuk menjaga hewan peliharaan Anda tetap sehat dan bahagia.
+          </p>
+          <a href="#">Baca selengkapnya</a>
+        </div>
+        <div class="intro__card">
+          <div class="intro__image">
+            <img src="assets/intro-3.png" alt="intro" />
+          </div>
+          <h4>Hubungi kami</h4>
+          <p>
+            Hubungi kami untuk pertanyaan apa pun atau jadwalkan janji temu untuk perawatan hewan peliharaan Anda.
+          </p>
+          <a href="#">Baca selengkapnya</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container about__container" id="about">
+      <p class="section__subheader">Tentang Kami</p>
+      <h2 class="section__header">Apa yang bisa kami lakukan untuk Anda?</h2>
+      <div class="about__row">
+        <div class="about__image">
+          <img src="assets/about-1.jpg" alt="about" />
+        </div>
+        <div class="about__content">
+          <span><img src="assets/about-1-icon.png" alt="about-icon" /></span>
+          <h4>Biarkan kami membantu Anda dengan kesehatan hewan peliharaan Anda</h4>
+          <p>
+            Dokter hewan ahli kami siap memberikan perawatan dan panduan komprehensif untuk memastikan hewan peliharaan Anda tetap dalam kondisi kesehatan yang sempurna.
+          </p>
+        </div>
+      </div>
+      <div class="about__row">
+        <div class="about__image">
+          <img src="assets/about-2.jpg" alt="about" />
+        </div>
+        <div class="about__content">
+          <span><img src="assets/about-2-icon.png" alt="about-icon" /></span>
+          <h4>Personel yang peduli akan merawat hewan peliharaan Anda</h4>
+          <p>
+            Hewan peliharaan Anda akan ditangani dengan baik oleh staf kami yang penuh kasih sayang dan terlatih, yang memperlakukan setiap hewan peliharaan seperti keluarga.
+          </p>
+        </div>
+      </div>
+      <div class="about__row">
+        <div class="about__image">
+          <img src="assets/about-3.jpg" alt="about" />
+        </div>
+        <div class="about__content">
+          <span><img src="assets/about-3-icon.png" alt="about-icon" /></span>
+          <h4>Mari rawat hewan kesayangan anda yang berharga dan dicintai</h4>
+          <p>
+            Dari memandikan hingga menata rambut, kami menawarkan layanan perawatan profesional untuk menjaga hewan peliharaan Anda tetap terlihat dan merasa terbaik.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product" id="store">
+      <div class="section__container product__container">
+        <p class="section__subheader">Produk</p>
+        <h2 class="section__header">Produk hewan peliharaan unggulan</h2>
+        <div class="product__grid">
+          <div class="product__card">
+            <img src="assets/product-1.jpg" alt="product" />
+            <h4>Kantong Sampah Anjing</h4>
+            <p>
+              Kantong sampah yang praktis dan ramah 
+              lingkungan untuk memudahkan pembuangan kotoran hewan peliharaan.
+            </p>
+            <h3>Rp 150.000</h3>
+          </div>
+          <div class="product__card">
+            <img src="assets/product-2.jpg" alt="product" />
+            <h4>Aksesoris Hewan Peliharaan</h4>
+            <p>
+              Jelajahi berbagai aksesoris bergaya dan fungsional untuk 
+              teman berbulu Anda.
+            </p>
+            <h3>Rp 225.000</h3>
+          </div>
+          <div class="product__card">
+            <img src="assets/product-3.jpg" alt="product" />
+            <h4>Makanan Anjing</h4>
+            <p>
+              Makanan anjing yang bergizi dan lezat untuk menjaga 
+              hewan peliharaan Anda tetap sehat dan bahagia.
+            </p>
+            <h3>Rp 55.000</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container service__container" id="service">
+      <p class="section__subheader">Layanan</p>
+      <h2 class="section__header">Apa yang bisa kami lakukan untuk Anda?</h2>
+      <div class="service__flex">
+        <div class="service__card">
+          <div>
+            <img src="assets/service-1.png" alt="service" />
+          </div>
+          <p>Perawatan Darurat</p>
+        </div>
+        <div class="service__card">
+          <div>
+            <img src="assets/service-2.png" alt="service" />
+          </div>
+          <p>Layanan Vaksinasi</p>
+        </div>
+        <div class="service__card">
+          <div>
+            <img src="assets/service-3.png" alt="service" />
+          </div>
+          <p>Konseling Gizi</p>
+        </div>
+        <div class="service__card">
+          <div>
+            <img src="assets/service-4.png" alt="service" />
+          </div>
+          <p>Konsultasi Perilaku</p>
+        </div>
+        <div class="service__card">
+          <div>
+            <img src="assets/service-5.png" alt="service" />
+          </div>
+          <p>Layanan Asrama Hewan Peliharaan</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="client">
+      <div class="section__container client__container">
+        <p class="section__subheader">Testimoni</p>
+        <h2 class="section__header">Apa kata orang tentang kami</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="client__card">
+                <div class="client__details">
+                  <img src="assets/client-1.jpg" alt="client" />
+                  <div>
+                    <h4>Sarah </h4>
+                    <h5>Desainer Grafis</h5>
+                  </div>
+                </div>
+                <p>
+                  Perawatan yang diterima anjing saya di Pet Shop sangat luar biasa. Dokter hewannya sangat memperhatikan kesehatan anjing saya.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client__card">
+                <div class="client__details">
+                  <img src="assets/client-2.jpg" alt="client" />
+                  <div>
+                    <h4>Adam</h4>
+                    <h5>Insinyur Perangkat Lunak</h5>
+                  </div>
+                </div>
+                <p>
+                  Dokter Hewan menyelamatkan kucing saya saat keadaan darurat! Respon dan keahlian mereka yang cepat membuat segalanya berbeda.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client__card">
+                <div class="client__details">
+                  <img src="assets/client-3.jpg" alt="client" />
+                  <div>
+                    <h4>Emil</h4>
+                    <h5>Guru</h5>
+                  </div>
+                </div>
+                <p>
+                  Saya mempercayakan semua hewan peliharaan saya kepada Pet Shop. Tim mereka profesional, dan mereka selalu berusaha keras demi pasien mereka.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client__card">
+                <div class="client__details">
+                  <img src="assets/client-4.jpg" alt="client" />
+                  <div>
+                    <h4>Jason</h4>
+                    <h5>Spesialis Pemasaran</h5>
+                  </div>
+                </div>
+                <p>
+                  Layanan perawatan di Pet Shop luar biasa! Anak anjing saya selalu kembali dalam keadaan segar dan bahagia.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client__card">
+                <div class="client__details">
+                  <img src="assets/client-5.jpg" alt="client" />
+                  <div>
+                    <h4>David </h4>
+                    <h5>Akuntan</h5>
+                  </div>
+                </div>
+                <p>
+                  Saya belum pernah melihat tim yang begitu berdedikasi pada hewan. Pet Shop adalah klinik pilihan saya untuk semua masalah terkait hewan peliharaan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container instagram__container">
+      <p>FOLLOW</p>
+      <h2 class="section__header">Instagram</h2>
+      <div class="instagram__grid">
+        <img src="assets/instagram-1.jpg" alt="instagram" />
+        <img src="assets/instagram-2.jpg" alt="instagram" />
+        <img src="assets/instagram-3.jpg" alt="instagram" />
+        <img src="assets/instagram-4.jpg" alt="instagram" />
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#">Pet Shop</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul class="footer__links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Faq</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Address</h4>
+          <ul class="footer__links">
+            <li><a href="#">Lumajang, Indonesia</a></li>
+            <li><a href="#">View on Maps</a></li>
+          </ul>
+          <br />
+          <h4>Inquiries</h4>
+          <ul class="footer__links">
+            <li><a href="#">+62 812345789</a></li>
+            <li><a href="#">info@website.com</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Newsletter</h4>
+          <p>Stay updated with out latest news</p>
+          <form action="/">
+            <input type="text" placeholder="Your email" />
+            <button class="btn">
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </form>
+          <br />
+          <h4>Follow Us</h4>
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-youtube-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-pinterest-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-tiktok-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024 Web Design Mastery. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
