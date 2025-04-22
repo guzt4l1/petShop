@@ -11,8 +11,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="styles.css" />
-    <title>Web Design Mastery | Pet Place</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+    <script src="database.js?v=2"></script>
+    <script src="main.js" defer></script>
+
+
+    <title>PetShop</title>
   </head>
   <body>
     <nav>
@@ -29,8 +35,55 @@
         <li><a href="#about">About</a></li>
         <li><a href="#store">Store</a></li>
         <li><a href="#service">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li>
+            <a href="#" id="shopping-cart-button">
+              <i data-feather="shopping-cart"></i>
+              <span class="qty-note" x-text="$store.cart.qty"></span>
+            </a>
+        </li>
       </ul>
+      <div class="shopping-cart">
+        <template x-for="(item , index) in $store.cart.items" :key="index">
+          <div class="cart-item">
+            <img :src="item.image" :alt="item.name" />
+            <div class="item-detail">
+              <h3 x-text="item.name"></h3>
+              <div class="item-price">
+                <span x-text="produkToko().formatRupiah(item.price)"></span>
+                <button id="remove" @click="$store.cart.remove(item.id)">
+                  &minus;
+                </button>
+                <span x-text="item.qty"></span>
+                <button id="add" @click="$store.cart.add(item)">
+                  &plus;
+                </button>
+                &equals;
+                <span x-text="produkToko().formatRupiah(item.total)"></span>
+              </div>
+            </div>
+          </div>
+        </template>
+      
+        <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem">
+          Belanjaan Anda Masih Kosong!!!
+        </h4>
+      
+        <h4 x-show="$store.cart.items.length">
+          Total : <span x-text="produkToko().formatRupiah($store.cart.total)"></span>
+        </h4>
+      
+        <div class="form-container">
+          <button
+            class="checkout-button"
+            type="button"
+            id="checkout-button"
+            x-show="$store.cart.items.length"
+            @click="$store.cart.checkout()"
+          >
+            Checkout
+          </button>
+        </div>
+      </div>      
     </nav>
     <header id="home">
       <div class="section__container header__container">
@@ -43,8 +96,8 @@
           </p>
           <div class="header__btn">
             <button>
-              Start Here!
-              <span><i class="ri-arrow-right-line"></i></span>
+              <a href="#about">Start Here!</a>
+              <span><i class="ri-arrow-right-line" ></i></span>
             </button>
           </div>
         </div>
@@ -142,38 +195,21 @@
       <div class="section__container product__container">
         <p class="section__subheader">Produk</p>
         <h2 class="section__header">Produk hewan peliharaan unggulan</h2>
-        <div class="product__grid">
-          <div class="product__card">
-            <img src="assets/product-1.jpg" alt="product" />
-            <h4>Kantong Sampah Anjing</h4>
-            <p>
-              Kantong sampah yang praktis dan ramah 
-              lingkungan untuk memudahkan pembuangan kotoran hewan peliharaan.
-            </p>
-            <h3>Rp 150.000</h3>
-          </div>
-          <div class="product__card">
-            <img src="assets/product-2.jpg" alt="product" />
-            <h4>Aksesoris Hewan Peliharaan</h4>
-            <p>
-              Jelajahi berbagai aksesoris bergaya dan fungsional untuk 
-              teman berbulu Anda.
-            </p>
-            <h3>Rp 225.000</h3>
-          </div>
-          <div class="product__card">
-            <img src="assets/product-3.jpg" alt="product" />
-            <h4>Makanan Anjing</h4>
-            <p>
-              Makanan anjing yang bergizi dan lezat untuk menjaga 
-              hewan peliharaan Anda tetap sehat dan bahagia.
-            </p>
-            <h3>Rp 55.000</h3>
-          </div>
+        <div class="product__grid" x-data="produkToko" x-init="console.log(products)">
+          <template x-for="product in products" :key="product.id">
+            <div class="product__card">
+              <button @click.prevent="$store.cart.add(product)">
+                <img :src="product.image" alt="product" />
+                <h4 x-text="product.name"></h4>
+                <p x-text="product.description"></p>
+                <h3 x-text="formatRupiah(product.price)"></h3>
+              </button>
+            </div>
+          </template>
         </div>
       </div>
-    </section>
-
+    </section>    
+    
     <section class="section__container service__container" id="service">
       <p class="section__subheader">Layanan</p>
       <h2 class="section__header">Apa yang bisa kami lakukan untuk Anda?</h2>
@@ -376,9 +412,10 @@
         Copyright © 2024 Web Design Mastery. All rights reserved.
       </div>
     </footer>
-
+    <script>
+      feather.replace();
+    </script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="main.js"></script>
   </body>
 </html>

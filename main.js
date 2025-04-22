@@ -89,3 +89,51 @@ ScrollReveal().reveal(".instagram__grid img", {
   duration: 1000,
   interval: 500,
 });
+
+// Toggle class active untuk shopping cart
+const shoppingCart = document.querySelector(".shopping-cart");
+document.querySelector("#shopping-cart-button").onclick = (e) => {
+  shoppingCart.classList.toggle("active");
+  e.preventDefault();
+};
+
+const sc = document.querySelector("#shopping-cart-button");
+
+document.addEventListener("click", function (e) {
+
+  if (!sc.contains(e.target) && !shoppingCart.contains(e.target)) {
+    shoppingCart.classList.remove("active");
+  }
+});
+
+function sendMasage() {
+  const name = document.getElementById("nama").value;
+  const email = document.getElementById("email").value;
+  const pesan = document.getElementById("pesan").value;
+
+  const url =
+    "https://api.whatsapp.com/send?phone=6282331540799&text=nama%20%3A%20" +
+    name +
+    "%0Aemail%20%3A%20" +
+    email +
+    "%0Apesan%20%3A%20" +
+    pesan +
+    ".";
+  window.open(url);
+}
+// Menambahkan interaktivitas pada FAQ
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+      // Ambil elemen jawaban berikutnya
+      const answer = question.nextElementSibling;
+
+      // Tampilkan atau sembunyikan jawaban
+      if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+      } else {
+          // Sembunyikan semua jawaban lainnya
+          document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+          answer.style.display = 'block';
+      }
+  });
+});
