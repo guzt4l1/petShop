@@ -63,6 +63,7 @@ document.addEventListener("alpine:init", () => {
             }
           });
         }
+        console.log('nambah');
       },
       remove(id) {
         const cartItem = this.items.find((item) => item.id === id);
