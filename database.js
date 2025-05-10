@@ -99,5 +99,12 @@ document.addEventListener("alpine:init", () => {
           "*%0AAtas%20Nama%0A*Nama mu*";
         window.open(url);
       },
+      formatRupiah(value) {
+          return value.toLocaleString("id-ID", {
+            style: "currency",
+            currency: "IDR",
+            minimumFractionDigits: 0
+          });
+        }
     });
 });

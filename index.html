@@ -24,7 +24,7 @@
     <nav>
       <div class="nav__header">
         <div class="nav__logo">
-          <a href="#">Pet Place</a>
+          <a href="#">PetShop</a>
         </div>
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>
@@ -43,20 +43,20 @@
         </li>
       </ul>
       <div class="shopping-cart" x-data>
-        <template x-for="(item , index) in $store.cart.items" x-key="index">
+        <template x-for="item in $store.cart.items" :key="item.id">
           <div class="cart-item">
             <img :src="item.image" :alt="item.name" />
             <div class="item-detail">
               <h3 x-text="item.name"></h3>
               <div class="item-price">
-                <span x-text="rupiah(item.price)"></span>
+                <span x-text="formatRupiah(item.price)"></span>
                 <button id="remove" @click="$store.cart.remove(item.id)">
                   &minus;
                 </button>
                 <span x-text="item.qty"></span>
                 <button id="add" @click="$store.cart.add(item)">&plus;</button
                 >&equals;
-                <span x-text="rupiah(item.total)"></span>
+                <span x-text="$store.cart.formatRupiah(item.total)"></span>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@
           Belanjaan Anda Masih Kosong!!!
         </h4>
         <h4 x-show="$store.cart.items.length">
-          Total : <span x-text="rupiah($store.cart.total)"></span>
+          Total : <span x-text="$store.cart.formatRupiah($store.cart.total)"></span>
         </h4>
         <div class="form-container">
           <button
@@ -78,7 +78,7 @@
             Checkout
           </button>
         </div>
-      </div>`
+      </div>
     </nav>
     <header id="home">
       <div class="section__container header__container">
