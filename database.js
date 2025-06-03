@@ -7,7 +7,7 @@ document.addEventListener("alpine:init", () => {
           {
             id: 1,
             name: "Kantong Sampah Anjing",
-            description: "Kantong sampah yang praktis dan ramah lingkungan untuk memudahkan pembuangan kotoran hewan peliharaan.",
+            description: "Kantong sampah yang praktis dan ramah lingkungan untuk memudahkan pembuangan kotoran hewan peliharaan anda.",
             price: 150000,
             image: "assets/product-1.jpg"
           },
