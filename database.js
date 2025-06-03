@@ -14,7 +14,7 @@ document.addEventListener("alpine:init", () => {
           {
             id: 2,
             name: "Aksesoris Hewan Peliharaan",
-            description: "Jelajahi berbagai aksesoris bergaya dan fungsional untuk teman berbulu Anda.",
+            description: "Jelajahi berbagai aksesoris bergaya dan fungsional untuk teman berbulu lebat Anda.",
             price: 225000,
             image: "assets/product-2.jpg"
           },
